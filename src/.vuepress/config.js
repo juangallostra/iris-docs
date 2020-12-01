@@ -37,10 +37,10 @@ module.exports = {
         text: 'Setup',
         link: '/setup/'
       },
-      {
-        text: 'Legacy',
-        link: '/legacy/'
-      }
+      // {
+      //   text: 'Legacy',
+      //   link: '/legacy/'
+      // }
     ],
     sidebar: {
       '/setup/': [
@@ -54,17 +54,17 @@ module.exports = {
           ]
         }
       ],
-      '/legacy/': [
-        {
-          title: 'Legacy Docs',
-          collapsable: false,
-          children: [
-            '',
-            'demo-jg-smart-platform',
-            'jgsmart-demo-setup',
-          ]
-        }
-      ],
+      // '/legacy/': [
+      //   {
+      //     title: 'Legacy Docs',
+      //     collapsable: false,
+      //     children: [
+      //       '',
+      //       'demo-jg-smart-platform',
+      //       'jgsmart-demo-setup',
+      //     ]
+      //   }
+      // ],
     }
   },
 

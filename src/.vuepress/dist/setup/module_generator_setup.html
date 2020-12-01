@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Module Generator Setup | Iris Technical Documentation</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Iris technical documentation">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.e95371f8.css" as="style"><link rel="preload" href="/assets/js/app.89f7823a.js" as="script"><link rel="preload" href="/assets/js/2.d35fa273.js" as="script"><link rel="preload" href="/assets/js/16.0868c9e5.js" as="script"><link rel="prefetch" href="/assets/js/10.2a7eca81.js"><link rel="prefetch" href="/assets/js/11.8bf06d4d.js"><link rel="prefetch" href="/assets/js/12.87692484.js"><link rel="prefetch" href="/assets/js/13.2d127b7a.js"><link rel="prefetch" href="/assets/js/14.a92ede79.js"><link rel="prefetch" href="/assets/js/15.3404b568.js"><link rel="prefetch" href="/assets/js/3.0277475e.js"><link rel="prefetch" href="/assets/js/4.bf905f50.js"><link rel="prefetch" href="/assets/js/5.44066470.js"><link rel="prefetch" href="/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/assets/js/7.a00e933e.js"><link rel="prefetch" href="/assets/js/8.94f9e596.js"><link rel="prefetch" href="/assets/js/9.2250d602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e95371f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Iris Technical Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/setup/" class="nav-link router-link-active">
+  Setup
+</a></div><div class="nav-item"><a href="/legacy/" class="nav-link">
+  Legacy
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/setup/" class="nav-link router-link-active">
+  Setup
+</a></div><div class="nav-item"><a href="/legacy/" class="nav-link">
+  Legacy
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Setup</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/setup/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/setup/iris_environment_setup.html" class="sidebar-link">Iris Setup</a></li><li><a href="/setup/module_generator_setup.html" aria-current="page" class="active sidebar-link">Module Generator Setup</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/setup/module_generator_setup.html#generator-setup" class="sidebar-link">Generator Setup</a></li><li class="sidebar-sub-header"><a href="/setup/module_generator_setup.html#example-module-creation" class="sidebar-link">Example Module Creation</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="module-generator-setup"><a href="#module-generator-setup" class="header-anchor">#</a> Module Generator Setup</h1> <h2 id="generator-setup"><a href="#generator-setup" class="header-anchor">#</a> Generator Setup</h2> <p>Start by cloning the <code>generator-iris-module</code> repository</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ git clone https://JGIng@dev.azure.com/JGIng/Iris/_git/generator-iris-module
+</code></pre></div><p>Once the repository has been cloned, <code>cd</code> into <code>generator-iris-module</code>, install the generator dependencies and create a symlink so that the local copy of the package is used.</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ cd generator-iris-module
+❯ yarn # install dependencies, equivalent to yarn install
+❯ yarn link # create symlink to use local copy
+</code></pre></div><p>After that, install <a href="https://yeoman.io" target="_blank" rel="noopener noreferrer">Yeoman<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>'s command line utility. Yeoman is a generic scaffolding system and <code>yo</code> its CLI.</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ npm install -g yo
+</code></pre></div><p>Once <code>yo</code> has been installed we already have everything in place to be able to run the iris generator. To get an overview of the different options run</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ yo iris-module --help
+</code></pre></div><h2 id="example-module-creation"><a href="#example-module-creation" class="header-anchor">#</a> Example Module Creation</h2> <p>Lets assume we want a create a new module called Presence Control with Device as its first entity. First create or change directory to the folder where you want the module to be created.</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ mkdir PresenceControl
+❯ cd PresenceControl
+</code></pre></div><p>To generate the module run</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ yo iris-module &quot;Presence Control&quot; &quot;Device&quot; --serviceCode &quot;PrsCtl&quot; --entityCode &quot;Dvc&quot;
+</code></pre></div><p>After the command finishes its execution open a new terminal session and run the api via the script <code>.\run-api.bat</code></p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ .\run-api.bat
+</code></pre></div><p>While the API is running, go back to the first terminal session and call <code>.\update-client.bat</code></p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ .\update-client.bat
+</code></pre></div><p>This might throw an error like the one shown below, but this is expected.</p> <div class="language-PS extra-class"><pre class="language-text"><code>C:\Users\gallo\Documents\dev\Iris\PresenceCounter&gt;cd lib/PresenceControls.ApiClient
+
+C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient&gt;dotnet graphql update
+Download schema started.
+
+C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient&gt;dotnet build
+Microsoft (R) Build Engine versión 16.8.0+126527ff1 para .NET
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+  Determinando los proyectos que se van a restaurar...
+  Todos los proyectos están actualizados para la restauración.
+  dotnet &quot;C:\Users\gallo\.nuget\packages\strawberryshake\11.0.0-preview.103\build\..\tools\dotnet-graphql.dll&quot; generate -p &quot;C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient&quot; -s -l 7.3 -d -n PresenceControls
+  Generate client started.
+  Generate client completed in 914 ms
+  PresenceControls -&gt; C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls\bin\Debug\net5.0\PresenceControls.dll
+C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient\ServicesInitializer.cs(23,30): error CS1061: &quot;IServiceCollection&quot; no contiene una definición para &quot;AddPresenceControlsApiClient&quot; ni un método de extensión accesible &quot;AddPresenceControlsApiClient&quot; que acepte un primer argumento del tipo &quot;IServiceCollection&quot; (¿falta alguna directiva using o una referencia de ensamblado?) [C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient\PresenceControls.ApiClient.csproj]
+
+ERROR al compilar.
+
+C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient\ServicesInitializer.cs(23,30): error CS1061: &quot;IServiceCollection&quot; no contiene una definición para &quot;AddPresenceControlsApiClient&quot; ni un método de extensión accesible &quot;AddPresenceControlsApiClient&quot; que acepte un primer argumento del tipo &quot;IServiceCollection&quot; (¿falta alguna directiva using o una referencia de ensamblado?) [C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient\PresenceControls.ApiClient.csproj]
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:02.46
+</code></pre></div><p>Kill the api process (<code>Ctrl+D</code> should suffice) running on the second terminal and build the project again.</p> <div class="language-PS extra-class"><pre class="language-text"><code>❯ dotnet build
+</code></pre></div><p>And that's it, the Presence Control module is ready.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/setup/iris_environment_setup.html" class="prev">
+        Iris Setup
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.89f7823a.js" defer></script><script src="/assets/js/2.d35fa273.js" defer></script><script src="/assets/js/16.0868c9e5.js" defer></script>
+  </body>
+</html>

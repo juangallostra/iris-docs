@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: http://www.jgingenieros.es/imgs/logo-ingenieros.png
+heroImage: ../src/assets/images/jg-logo.png
 tagline: Your Favourite Smart Building Platform
 actionText: Quick Start →
 actionLink: /setup/

@@ -21,7 +21,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    artifactName: .src/.vuepress/dist
+    artifactName: ./src/.vuepress/dist
 # - task: PublishBuildArtifacts@1
 # - uses: actions/checkout@v2
 #   with:

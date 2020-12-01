@@ -2,7 +2,7 @@
 
 A step by step guide to get Iris up and running.
 
-This guide assumes Windows is the target OS. Furthermore, all the commands are written for PowerShell.
+This guide assumes Windows is the target OS. A part from that, all the commands are written for PowerShell.
 
 ## 1. Install Docker
 
@@ -24,38 +24,39 @@ If the WSL has not been enabled yet you will have to enable it. To do so, head t
 To download and install Dapr run the following command on Windows PowerShell:
 
 ```PS
-> iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex
+❯ iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex
 ```
 
 If an error is raised, you might have to run
 
 ```PS
-> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+❯ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
 Take into account that until [Tye](https://github.com/dotnet/tye) gets updated the version of Dapr that should be used is 0.11. This is due to compatibility reasons. Once the installation of Dapr has finished close the terminal window, open a new one and execute:
 
 ```PS
-> dapr init
+❯ dapr init
 ```
 
 If everything went ok, this will launch Dapr. If you run `docker ps` you should see 3 Dapr containers running. The one called `dapr_placement` should be stopped (and optionally removed) beacuse it binds to a wrong port. To do so and start the fixed container run:
 
 ```PS
-> docker stop dapr_placement
-> docker rm dapr_placement
-> docker run --name dapr_placement_fix -p 50005:50005 -d daprio/dapr ./placement
+❯ docker stop dapr_placement
+❯ docker rm dapr_placement
+❯ docker run --name dapr_placement_fix -p 50005:50005 -d daprio/dapr ./placement
 ```
 
 ## 3. Install and Setup Tye
 
 **Project page**: [https://github.com/dotnet/tye](https://github.com/dotnet/tye)
+
 **Installation instructions from**: [https://github.com/dotnet/tye/blob/master/docs/getting_started.md](https://github.com/dotnet/tye/blob/master/docs/getting_started.md)
 
 On a terminal session run:
 
 ```PS
-> dotnet tool install -g Microsoft.Tye --version "0.5.0-alpha.20555.1"
+❯ dotnet tool install -g Microsoft.Tye --version "0.5.0-alpha.20555.1"
 ```
 
 This should be enough.
@@ -65,7 +66,7 @@ This should be enough.
 Once Docker, Dapr and Tye have been installed and are up and running it is time to clone the desired Iris repositories. For this example we will use [RoomBookings](https://dev.azure.com/JGIng/Iris/_git/RoomBookings). Clone it by:
 
 ```PS
-> git clone https://JGIng@dev.azure.com/JGIng/Iris/_git/RoomBookings
+❯ git clone https://JGIng@dev.azure.com/JGIng/Iris/_git/RoomBookings
 ```
 
 ## 5. Run
@@ -73,8 +74,8 @@ Once Docker, Dapr and Tye have been installed and are up and running it is time 
 `cd` into the above cloned repository and run:
 
 ```PS
-> dotnet tool restore
-> dotnet build
+❯ dotnet tool restore
+❯ dotnet build
 ```
 
 If this commands fail, check that the XML Documentation files of the projects are pointing to the correct paths. To do so, navigate to
@@ -86,7 +87,7 @@ and check the path. It should be `.\[PROJECT_NAME].xml`. If it is not, change it
 Finally, run:
 
 ```PS
-> .\dev.bat
+❯ .\dev.bat
 ```
 
 If everything went ok this command should automatically open the Tye Dashboard at `http://127.0.0.1:8000/`.

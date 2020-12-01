@@ -16,7 +16,7 @@ steps:
 
 - script: |
     npm install
-    npm run-script build --dest dist
+    npm run build -- --dest dist
   displayName: 'npm install and build'
 
 - task : ArchiveFiles@2

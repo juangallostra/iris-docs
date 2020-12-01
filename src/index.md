@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ../src/assets/images/jg-logo.png
+heroImage: /jg-logo.png
 tagline: Your Favourite Smart Building Platform
 actionText: Quick Start →
 actionLink: /setup/

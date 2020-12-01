@@ -9,10 +9,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)/.vuepress/dist'
-    replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
 # - uses: actions/checkout@v2
 #   with:

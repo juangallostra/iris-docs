@@ -1,0 +1,19 @@
+{
+  "name": "iris-docs",
+  "version": "0.0.1",
+  "description": "Iris technical documentation",
+  "main": "index.js",
+  "authors": {
+    "name": "Juan",
+    "email": "jgallostraa@jgingenieros.es"
+  },
+  "repository": "/iris-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}

@@ -51,6 +51,7 @@ module.exports = {
             '',
             'iris_environment_setup',
             'module_generator_setup',
+            'technologies'
           ]
         }
       ],

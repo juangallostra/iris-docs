@@ -82,9 +82,17 @@ C:\Users\gallo\Documents\dev\Iris\PresenceCounter\lib\PresenceControls.ApiClient
 Tiempo transcurrido 00:00:02.46
 ```
 
-Kill the api process (`Ctrl+D` should suffice) running on the second terminal and build the project again. 
+Kill the api process (`Ctrl+C` should suffice) running on the second terminal and build the project again. 
 
 ```PS
 ❯ dotnet build
 ``` 
 And that's it, the Presence Control module is ready.
+
+You can test-run it with
+
+```PS
+❯ .\dev.bat
+```
+
+which should automatically open a new browser tab with Tye's dashboard at `http://127.0.0.1:8000`.

@@ -10,3 +10,6 @@ run
 .basement
 config.local.js
 basement_dist
+
+# As of now
+legacy

@@ -37,6 +37,10 @@ module.exports = {
         text: 'Setup',
         link: '/setup/'
       },
+      {
+        text: 'Miscelaneous',
+        link: '/miscelaneous/'
+      }
       // {
       //   text: 'Legacy',
       //   link: '/legacy/'
@@ -51,6 +55,16 @@ module.exports = {
             '',
             'iris_environment_setup',
             'module_generator_setup',
+          ]
+        }
+      ],
+      '/miscelaneous/': [
+        {
+          title: 'Miscelaneous',
+          collapsable: false,
+          children: [
+            '',
+            'graphql_client_update',
             'technologies'
           ]
         }

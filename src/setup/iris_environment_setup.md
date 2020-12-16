@@ -71,7 +71,7 @@ Once Docker, Dapr and Tye have been installed and are up and running it is time 
 
 ### 4.1 Repositories with submodules
 
-To know more about git submodules visit :[Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+To know more about git submodules visit: [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 Some of the project repositories depend on several submodules to work. As an example, see the repository [RoomBookingsOnGCalendar](https://dev.azure.com/JGIng/Iris/_git/RoomBookingsOnGCalendar). You can see a [.gitmodules](https://dev.azure.com/JGIng/Iris/_git/RoomBookingsOnGCalendar?path=%2F.gitmodules) file where the repository submodules are specified.
 

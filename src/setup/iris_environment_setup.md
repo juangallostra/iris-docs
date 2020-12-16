@@ -69,6 +69,27 @@ Once Docker, Dapr and Tye have been installed and are up and running it is time 
 ❯ git clone https://JGIng@dev.azure.com/JGIng/Iris/_git/RoomBookings
 ```
 
+### 4.1 Repositories with submodules
+
+To know more about git submodules visit :[Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+Some of the project repositories depend on several submodules to work. As an example, see the repository [RoomBookingsOnGCalendar](https://dev.azure.com/JGIng/Iris/_git/RoomBookingsOnGCalendar). You can see a [.gitmodules](https://dev.azure.com/JGIng/Iris/_git/RoomBookingsOnGCalendar?path=%2F.gitmodules) file where the repository submodules are specified.
+
+```
+[submodule "deps/RoomBookings"]
+	path = deps/RoomBookings
+	url = https://JGIng@dev.azure.com/JGIng/Iris/_git/RoomBookings
+[submodule "deps/GCalendar"]
+	path = deps/GCalendar
+	url = https://JGIng@dev.azure.com/JGIng/Iris/_git/GCalendar
+```
+
+Cloning the repository will create the folders `deps/RoomBookings` and `deps/GCalendar`, but they will be empty. To initialize the submodules you have to run two commands. `cd` into the submodule folder and run `git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data from that project and check out the appropriate commit listed in your superproject.
+
+There is another way to do this which is a little simpler, however. If you pass `--recurse-submodules` to the git clone command, it will automatically initialize and update each submodule in the repository, including nested submodules if any of the submodules in the repository have submodules themselves.
+
+If you already cloned the project and forgot `--recurse-submodules`, you can combine the `git submodule init` and `git submodule update` steps by running `git submodule update --init`. To also initialize, fetch and checkout any nested submodules, you can use the foolproof `git submodule update --init --recursive`.
+
 ## 5. Run
 
 `cd` into the above cloned repository and run:

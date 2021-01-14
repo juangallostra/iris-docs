@@ -40,11 +40,11 @@ module.exports = {
       {
         text: 'Miscelaneous',
         link: '/miscelaneous/'
+      },
+      {
+        text: 'Frontend',
+        link: '/frontend/'
       }
-      // {
-      //   text: 'Legacy',
-      //   link: '/legacy/'
-      // }
     ],
     sidebar: {
       '/setup/': [
@@ -69,6 +69,16 @@ module.exports = {
           ]
         }
       ],
+      '/frontend/': [
+        {
+          title: 'Frontend',
+          collapsable: false,
+          children: [
+            '',
+            'components/dock-menu',
+          ]
+        }
+      ],      
       // '/legacy/': [
       //   {
       //     title: 'Legacy Docs',
